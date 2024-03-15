@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Verification</title>
+<style>
+  .menu {
+    display: none;
+  }
+  #ageVerification {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="menu">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+
+<div id="ageVerification">
+  <p>Are you an adult?</p>
+  <button onclick="handleYes()">Yes</button>
+  <button onclick="handleNo()">No</button>
+</div>
+
+<script>
+  function handleYes() {
+    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+  }
+
+  function handleNo() {
+    var ageVerification = document.getElementById('ageVerification');
+    var menu = document.querySelector('.menu');
+    ageVerification.style.display = 'none';
+    menu.style.display = 'none';
+  }
+
+  // Show age verification prompt initially
+  document.addEventListener('DOMContentLoaded', function() {
+    var ageVerification = document.getElementById('ageVerification');
+    ageVerification.style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
